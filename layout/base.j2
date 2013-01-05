@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="{{ resource.meta.charset }}">
+<meta name="viewport" content="{{ resource.meta.viewport }}">
+<title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+<meta name="author" content="{{ resource.meta.author }}">
+<meta name="description" content="{{ resource.meta.description }}">
+
+<link rel="stylesheet" href="{{ media_url('css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ media_url('css/bootstrap-responsive.css') }}">
+
+</head>
+
+<body style="padding-top: 5px;">
+  <!-- Add your site or application content here -->
+  {% block content %}{% endblock content%}
+
+<!-- javascript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+{% block javascript_framework %}
+{% include "javascript-framework.j2" %}
+{% endblock javascript_framework %}
+
+<script type="text/javascript">
+{% block scripts %}{% endblock scripts %}
+</script>
+
+</body>
+
+</html>
