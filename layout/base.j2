@@ -14,8 +14,60 @@
 </head>
 
 <body style="padding-top: 5px;">
+
+<!-- NAVBAR
+    ================================================== -->
+<div class="navbar-wrapper">
+  <div class="container">
+    <!-- logo -->
+    <div id="logo" style="padding-bottom: 5px;">
+      <img src="{{ media_url('img/logo.png') }}">
+      <img src="{{ media_url('img/title.png') }}">
+      <div class="btn-group pull-right">
+        <button class="btn">设为首页</button>
+        <button class="btn">加入收藏夹</button>
+        <button class="btn">臻源微博</button>
+      </div>
+    </div>
+    <!-- navigation -->
+    <div class="navbar" style="margin-bottom: 1px;">
+      <div class="navbar-inner">{{ pagenode }}
+        {% block menu %}{% endblock %}
+        <form class="navbar-search pull-right">
+          <i class="icon-search"></i>
+          <input type="text" class="search-query" placeholder="输入您想查找的内容">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.navbar-wrapper -->
+
+<!-- BODY
+    ================================================== -->
+<div class="body-wrapper">
   <!-- Add your site or application content here -->
   {% block content %}{% endblock content%}
+</div>
+<!-- /.body-wrapper -->
+
+<!-- FOOTER
+    ================================================== -->
+<div class="footer-wrapper">
+  <div class="container">
+    <hr class="featurette-divider">
+
+    <footer>
+      <p class="pull-right">
+        <a href="#">返回顶部</a>
+      </p>
+      <p>
+        沪ICP备123456789号<br /> &copy; 2012 臻源美容调理养生馆 &middot; <a href="#">Privacy</a>
+      </p>
+    </footer>
+  </div>
+</div>
+<!-- /.footer-wrapper -->
 
 <!-- javascript
   ================================================== -->

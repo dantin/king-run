@@ -1,0 +1,10 @@
+{% macro render_navbar(menu, class=None, pagenode=None) -%}
+{% if menu %}
+<ul {{ 'class="'~class~'"' if class }}>
+  {% for item in menu %}
+    {% set active = (pagenode == item.node) %}
+    <li {{ 'class="active"' if active }}><a href="{{ content_url(item.url) }}">{{ item.name }}</a></li>
+  {% endfor %}
+      </ul>
+{% endif %}
+{%- endmacro %}

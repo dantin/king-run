@@ -11,27 +11,35 @@ plugins:
     - hyde.ext.plugins.textlinks.TextlinksPlugin
 context:
     data:
-        version: 0.1
-        tweet_via: david.ding
         menu:
             -
-                name: Home
-                description: Home Page
-                type: page
+                name: 网站首页
+                description: 网站首页
+                node: index
                 url: index.html
             -
-                name: Blog
-                description: Blog
-                type: node
-                url: blog
+                name: 臻源项目
+                description: 臻源项目
+                node: projects
+                url: projects/special.html
             -
-                name: About
-                description: About
-                type: page
-                url: about.html
+                name: 新闻中心
+                description: 新闻中心
+                node: news
+                url: news/promotion.html
+            -
+                name: 关于臻源
+                description: 关于臻源
+                node: about
+                url: about/introduction.html
+            -
+                name: 联系我们
+                description: 联系我们
+                node: contact
+                url: contact/addressbook.html
 meta:
-    name: WHEROG
-    title: wherog.com
+    name: 臻源美颜调理养生馆
+    title: www.kingrun-hbc.com
     nodemeta: meta.yaml
     author: David Ding
     charset: utf-8

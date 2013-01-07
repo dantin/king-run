@@ -1,0 +1,7 @@
+{% extends "base.j2" %}
+
+{% from "macros.j2" import render_navbar with context %}
+
+{% block menu %}
+{{ render_navbar(menu, 'nav', 'index') }}
+{% endblock%}

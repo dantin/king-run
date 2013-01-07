@@ -4,8 +4,9 @@ Tool=hyde
 all:
 	@echo "HYDE tools"
 	@echo
-	@echo "  make gen: generate project to website"
 	@echo "  make clean: clear workspace"
+	@echo "  make gen:   generate deploy directory"
+	@echo "  make run:   run local tier"
 
 .PHONY: clean gen run
 
