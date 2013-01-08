@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
 <meta charset="{{ resource.meta.charset }}">
@@ -31,7 +31,7 @@
     </div>
     <!-- navigation -->
     <div class="navbar" style="margin-bottom: 1px;">
-      <div class="navbar-inner">{{ pagenode }}
+      <div class="navbar-inner">
         {% block menu %}{% endblock %}
         <form class="navbar-search pull-right">
           <i class="icon-search"></i>
@@ -46,8 +46,7 @@
 <!-- BODY
     ================================================== -->
 <div class="body-wrapper">
-  <!-- Add your site or application content here -->
-  {% block content %}{% endblock content%}
+  {% block main %}{% endblock %}
 </div>
 <!-- /.body-wrapper -->
 
@@ -74,10 +73,10 @@
 <!-- Placed at the end of the document so the pages load faster -->
 {% block javascript_framework %}
 {% include "javascript-framework.j2" %}
-{% endblock javascript_framework %}
+{% endblock %}
 
-<script type="text/javascript">
-{% block scripts %}{% endblock scripts %}
+<script>
+{% block javascripts %}{% endblock %}
 </script>
 
 </body>
