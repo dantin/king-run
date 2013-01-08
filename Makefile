@@ -12,6 +12,7 @@ all:
 
 gen:
 	$(Tool) gen
+	cp content/media/js/libs/*.js deploy/media/js/libs/
 
 clean:
 	find . -name "*~" | xargs rm
