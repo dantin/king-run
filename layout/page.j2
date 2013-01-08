@@ -1,0 +1,21 @@
+{% extends "base.j2" %}
+
+{% block main %}
+<br />
+<div class="container-fluid container">
+  <div class="row-fluid">
+    <div class="span2">
+      <div class="well sidebar-nav">
+        {% block sidemenu %}{% endblock %}
+      </div>
+    </div>
+
+    <div class="span10">
+      <div id="breadcrumb">
+        {% block breadcrumb %}{% endblock %}
+      </div>
+        {% block content %}{% endblock %}
+    </div>
+  </div>
+</div>
+{% endblock %}

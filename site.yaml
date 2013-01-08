@@ -37,6 +37,19 @@ context:
                 description: 联系我们
                 node: contact
                 url: contact/addressbook.html
+        submenu:
+            -
+                name: 特色养身项目
+                description: 特色养身项目
+                node: special
+                parent: projects
+                url: special.html
+            -
+                name: 食疗方案
+                description: 食疗方案
+                node: food
+                parent: projects
+                url: food.html
 meta:
     name: 臻源美颜调理养生馆
     title: www.kingrun-hbc.com

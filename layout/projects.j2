@@ -1,0 +1,15 @@
+{% extends "page.j2" %}
+
+{% from "macros.j2" import render_navbar with context %}
+
+{% block menu %}
+{{ render_navbar(menu, 'nav', 'projects') }}
+{% endblock%}
+
+{% from "macros.j2" import render_sidenav with context %}
+
+{% block sidemenu %}
+{{ render_sidenav(menu, submenu, 'nav nav-list') }}
+{% endblock%}
+
+
