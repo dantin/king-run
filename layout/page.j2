@@ -1,6 +1,7 @@
 {% extends "base.j2" %}
 
 {% from "macros.j2" import render_sidenav with context %}
+{% from "macros.j2" import render_breadcrumb with context %}
 
 {% block main %}
 <br />
@@ -14,7 +15,7 @@
 
     <div class="span10">
       <div id="breadcrumb">
-        {% block breadcrumb %}{% endblock %}
+      {{ render_breadcrumb(menu, submenu, resource.meta.menunode, resource.meta.submenunode) }}
       </div>
         {% block content %}{% endblock %}
     </div>

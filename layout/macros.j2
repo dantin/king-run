@@ -13,17 +13,33 @@
 {% if menu and submenu %}
 <ul{{ ' class="'~class~'"' if class }}>
  {% for item in menu %}
+ {% if item.node != 'index' %}
  <li class="nav-header king-run-font15">{{ item.name }}</li>
   {% for subitem in submenu %}
    {% if subitem.parent == item.node %}
    <li{{ ' class="active"' if subitem.node == pagenode }}><a href="{{ content_url(subitem.parent~'/'~subitem.url) }}">{{ subitem.name }}</a></li>
    {% endif %}
   {% endfor %}
+ {% endif %}
  {% endfor %}
 </ul>
 {% endif %}
 {%- endmacro %}
 
-{% macro render_breadcrumb() -%}
-<p>breadcrumb</p>
+{% macro render_breadcrumb(menu, submenu, menunode=None, pagenode=None) -%}
+{% if menu and submenu %}
+<ul class="breadcrumb">
+<li><a href="../index.html">网站首页</a> <span class="divider">&raquo;</span></li>
+{% for item in menu %}
+{% if item.node == menunode %}
+  <li><a href="{{ content_url(item.url) }}">{{ item.name }}</a><span class="divider">&raquo;</span></li>
+{% endif %}
+{% endfor %}
+{% for item in submenu %}
+{% if item.node == pagenode %}
+  <li class="active">{{ item.name }}</li>
+{% endif %}
+{% endfor %}
+</ul>
+{% endif %}
 {%- endmacro%}
