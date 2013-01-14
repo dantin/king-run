@@ -50,6 +50,54 @@ context:
                 node: food
                 parent: projects
                 url: food.html
+            -
+                name: 优惠推荐
+                description: 优惠推荐
+                node: promotion
+                parent: news
+                url: promotion.html
+            -
+                name: 专家团队
+                description: 专家团队
+                node: experts
+                parent: news
+                url: experts.html
+            -
+                name: 臻源动态
+                description: 臻源动态
+                node: latest
+                parent: news
+                url: latest.html
+            -
+                name: 企业简介
+                description: 企业简介
+                node: introduction
+                parent: about
+                url: introduction.html
+            -
+                name: 臻源文化
+                description: 臻源文化
+                node: culture
+                parent: about
+                url: culture.html
+            -
+                name: 臻源特色
+                description: 臻源特色
+                node: feature
+                parent: about
+                url: feature.html
+            -
+                name: 联系方式
+                description: 联系方式
+                node: addressbook
+                parent: contact
+                url: addressbook.html
+            -
+                name: 公司地址
+                description: 公司地址
+                node: location
+                parent: contact
+                url: location.html
 meta:
     name: 臻源美颜调理养生馆
     title: www.kingrun-hbc.com
