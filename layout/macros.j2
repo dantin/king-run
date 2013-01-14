@@ -12,14 +12,18 @@
 {% macro render_sidenav(menu, submenu, class=None, pagenode=None) -%}
 {% if menu and submenu %}
 <ul{{ ' class="'~class~'"' if class }}>
-  {% for item in menu %}
-    <li class="nav-header king-run-font15">{{ item.name }}</li>
-    {% for subitem in submenu %}
-    {% if subitem.parent == item.node %}
-    <li class=""><a href="{{ content_url(subitem.parent~'/'~subitem.url) }}">{{ subitem.name }}</a></li>
-    {% endif %}
-    {% endfor %}
+ {% for item in menu %}
+ <li class="nav-header king-run-font15">{{ item.name }}</li>
+  {% for subitem in submenu %}
+   {% if subitem.parent == item.node %}
+   <li{{ ' class="active"' if subitem.node == pagenode }}><a href="{{ content_url(subitem.parent~'/'~subitem.url) }}">{{ subitem.name }}</a></li>
+   {% endif %}
   {% endfor %}
-      </ul>
+ {% endfor %}
+</ul>
 {% endif %}
 {%- endmacro %}
+
+{% macro render_breadcrumb() -%}
+<p>breadcrumb</p>
+{%- endmacro%}

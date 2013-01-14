@@ -1,12 +1,14 @@
 {% extends "base.j2" %}
 
+{% from "macros.j2" import render_sidenav with context %}
+
 {% block main %}
 <br />
 <div class="container-fluid container">
   <div class="row-fluid">
     <div class="span2">
       <div class="well sidebar-nav">
-        {% block sidemenu %}{% endblock %}
+      {{ render_sidenav(menu, submenu, 'nav nav-list', resource.meta.submenunode) }}
       </div>
     </div>
 

@@ -1,8 +1,14 @@
 ---
-extends: projects.j2
+extends: page.j2
 default_block: content
 title: 臻源美颜调理养生馆 特色养身项目
 description: 臻源、调理、养生
+menunode: projects
+submenunode: special
 ---
 
-测试
+{% from "macros.j2" import render_breadcrumb with context %}
+{{ render_breadcrumb() }}
+
+
+测试1

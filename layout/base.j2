@@ -14,6 +14,8 @@
 
 </head>
 
+{% from "macros.j2" import render_navbar with context %}
+
 <body style="padding-top: 5px;">
 
 <!-- NAVBAR
@@ -33,7 +35,7 @@
     <!-- navigation -->
     <div class="navbar" style="margin-bottom: 1px;">
       <div class="navbar-inner">
-        {% block menu %}{% endblock %}
+        {{ render_navbar(menu, 'nav', resource.meta.menunode) }}
         <form class="navbar-search pull-right">
           <i class="icon-search"></i>
           <input type="text" class="search-query" placeholder="输入您想查找的内容">
