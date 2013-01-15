@@ -98,6 +98,12 @@ context:
                 node: location
                 parent: contact
                 url: location.html
+            -
+                name: 客户留言
+                description: 客户留言
+                node: message
+                parent: contact
+                url: message.html
 meta:
     name: 臻源美颜调理养生馆
     title: www.kingrun-hbc.com
